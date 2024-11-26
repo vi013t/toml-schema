@@ -17,9 +17,9 @@ toml! {
 }
 
 fn main() -> anyhow::Result<()> {
-	let default = Config::default();
-	assert_eq!(false, default.quiet());
-	assert_eq!("JSON", default.output().format());
+	let config = Config::default();
+	assert_eq!(false, config.quiet());
+	assert_eq!("JSON", config.output().format());
 
 	let user_config: Config = include_str!("user_config.toml").parse()?;
 }
