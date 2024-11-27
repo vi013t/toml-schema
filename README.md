@@ -6,7 +6,7 @@ A Rust library for generating TOML schemas that are statically typed and generat
 
 ```rust
 toml! {
-	#[document(Config)]
+	#[name = Config]
 
 	name = "example";
 

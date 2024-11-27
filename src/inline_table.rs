@@ -93,7 +93,7 @@ impl quote::ToTokens for ChildInlineTablePrelude {
             .collect::<Vec<_>>();
 
         tokens.extend(quote::quote! {
-            struct #heading_type {
+            pub struct #heading_type {
                 #(
                     #properties
                 ),*
